@@ -11,7 +11,7 @@ ffmpeg.setFfmpegPath(ffmpegStatic);
 async function detectSilences(filePath, silenceThreshold) {
   // Duración del silencio en segundos y en dB
   const silenceDuration = silenceThreshold;
-  const silenceDB = -30; // Ajusta este valor según tus necesidades
+  const silenceDB = -15; // Ajusta este valor según tus necesidades
 
   return new Promise((resolve, reject) => {
       // Obtener la duración total del archivo primero
@@ -104,8 +104,8 @@ function generateNewArray(arr) {
 }
 
 // Uso de las funciones
-const audioPath = './test.mp3';
-const silenceThreshold = 3.5; // Duración en segundos para considerar un silencio
+const audioPath = './Sombras de identidad.mp3';
+const silenceThreshold = 3.400; // Duración en segundos para considerar un silencio
 
 console.time()
 detectSilences(audioPath, silenceThreshold).then((segments) => {
